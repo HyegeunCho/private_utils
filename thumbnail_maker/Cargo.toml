@@ -1,0 +1,11 @@
+[package]
+name = "thumbnail_maker"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.31", features = ["derive"] }
+image = "0.25.5"
+indicatif = "0.17.11"
+walkdir = "2.5.0"
+webp = "0.3.0"
