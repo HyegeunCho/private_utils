@@ -1,0 +1,6 @@
+Cargo.lock
+/target
+/libs/ffmpeg.exe
+/libs/yt-dlp.exe
+
+/downloads

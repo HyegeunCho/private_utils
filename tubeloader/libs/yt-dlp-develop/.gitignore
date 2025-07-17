@@ -1,0 +1,11 @@
+.idea/
+.github/
+yt-dlp.iml
+
+Cargo.lock
+target/
+
+libs/
+temp/
+
+example.json
