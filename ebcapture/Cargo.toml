@@ -1,0 +1,32 @@
+[package]
+name = "ebcapture"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# 화면 캡쳐
+scrap = "0.5"
+# PDF 생성 (embedded_images feature 추가)
+printpdf = { version = "0.6", features = ["embedded_images"] }
+# 키보드 입력 시뮬레이션  
+enigo = "0.1"
+# 비동기 런타임
+tokio = { version = "1.0", features = ["full"] }
+# 에러 처리
+anyhow = "1.0"
+thiserror = "1.0"
+# 날짜/시간 처리
+chrono = { version = "0.4", features = ["serde"] }
+# 이미지 처리
+image = "0.24"
+# 로깅
+log = "0.4"
+env_logger = "0.10"
+
+# 플랫폼별 의존성
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["winuser", "winbase", "handleapi", "processthreadsapi", "psapi"] }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+cocoa = "0.24"
+core-graphics = "0.22"
